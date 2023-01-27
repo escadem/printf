@@ -6,11 +6,12 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 19:32:10 by eescat-l          #+#    #+#             */
-/*   Updated: 2023/01/26 20:15:59 by eescat-l         ###   ########.fr       */
+/*   Updated: 2023/01/26 20:25:59 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+// #include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {

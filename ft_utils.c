@@ -6,11 +6,12 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 19:42:45 by eescat-l          #+#    #+#             */
-/*   Updated: 2023/01/25 23:54:41 by eescat-l         ###   ########.fr       */
+/*   Updated: 2023/01/26 20:26:26 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+// #include "libftprintf.h"
+#include "ft_printf.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

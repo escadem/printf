@@ -6,11 +6,12 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 19:47:22 by eescat-l          #+#    #+#             */
-/*   Updated: 2023/01/26 20:16:31 by eescat-l         ###   ########.fr       */
+/*   Updated: 2023/01/26 20:26:12 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+// #include "libftprintf.h"
+#include "ft_printf.h"
 
 unsigned int	ft_digit_lenght(long int n, int base)
 {

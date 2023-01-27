@@ -6,11 +6,12 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 19:09:04 by eescat-l          #+#    #+#             */
-/*   Updated: 2023/01/26 20:16:52 by eescat-l         ###   ########.fr       */
+/*   Updated: 2023/01/26 21:07:51 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+// #include "libftprintf.h"
+#include "ft_printf.h"
 
 static int	ft_check_placeholder(char c)
 {
@@ -85,29 +86,29 @@ int	ft_printf(char const *string, ...)
 	return (counter);
 }
 
-int main()
-{
-	// char a = 'a';
-	// char *p_a = &a;
-	int i = -170;
-	long l;
-	l = i;
-	printf ("\n\n%ld___%lu___%lx___\n\n",l,l,l);
-	printf("prueba\n");
-	ft_printf("prueba\n");
-	printf("i = %i\n", 15);
-	ft_printf("i = %i\n", 15);
-	printf("c = %%\n");
-	ft_printf("c = %%\n");
-	printf("printf = %d\n", 0);
-	ft_printf("ft_printf = %d\n", 0);
-	printf("printf = %d\n", -17);
-	ft_printf("ft_printf = %d\n", -17);
-	printf("printf = %X\n", -1);
-	ft_printf("ft_printf = %X\n", -1);
-	printf("puntero printf = %p\n", &i);
-	ft_printf("%p\n", &i);
-	ft_printf("puntero ft_printf = %p\n", &i);
-	printf("%c\n", 'a');
-	ft_printf("%c\n", 'a');
-}
+// int main()
+// {
+// 	// char a = 'a';
+// 	// char *p_a = &a;
+// 	int i = -170;
+// 	long l;
+// 	l = i;
+// 	printf ("\n\n%ld___%lu___%lx___\n\n",l,l,l);
+// 	printf("prueba\n");
+// 	ft_printf("prueba\n");
+// 	printf("i = %i\n", 15);
+// 	ft_printf("i = %i\n", 15);
+// 	printf("c = %%\n");
+// 	ft_printf("c = %%\n");
+// 	printf("printf = %d\n", 0);
+// 	ft_printf("ft_printf = %d\n", 0);
+// 	printf("printf = %d\n", -17);
+// 	ft_printf("ft_printf = %d\n", -17);
+// 	printf("printf = %X\n", -1);
+// 	ft_printf("ft_printf = %X\n", -1);
+// 	printf("puntero printf = %p\n", &i);
+// 	ft_printf("%p\n", &i);
+// 	ft_printf("puntero ft_printf = %p\n", &i);
+// 	printf("%c\n", 'a');
+// 	ft_printf("%c\n", 'a');
+// }
