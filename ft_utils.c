@@ -1,54 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.c                                         :+:      :+:    :+:   */
+/*   ft_digitutils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 19:42:45 by eescat-l          #+#    #+#             */
-/*   Updated: 2023/01/26 20:26:26 by eescat-l         ###   ########.fr       */
+/*   Created: 2023/01/23 19:47:22 by eescat-l          #+#    #+#             */
+/*   Updated: 2023/01/28 07:56:12 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libftprintf.h"
 #include "ft_printf.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	ft_chardigit(long int nr, char chr)
 {
-	size_t	i;
+	char	*charchrx;
+	char	*charchrX;
 
-	i = 0;
-	if (dst == src || n == 0)
-		return (dst);
-	while (i < n)
-	{
-		*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
-		i ++;
-	}
-	return (dst);
-}
+	charchrx = "0123456789abcdef";
+	charchrX = "0123456789ABCDEF";
 
-void	*ft_bzero(void *s, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		*(unsigned char *)(s + i) = (unsigned char) 0;
-		i ++;
-	}
-	return (s);
-}
-
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*p;
-
-	if (count > SIZE_MAX / size)
-		return (NULL);
-	p = (void *)malloc(count * size);
-	if (p == NULL)
-		return (NULL);
-	return (ft_bzero(p, count * size));
+	// if (chr == 'x' || chr == 'd' || chr == 'i')
+	// 	charchr = "0123456789abcdef";
+	// else
+	// 	charchr = "0123456789ABCDEF";
+	// // if (chr == 'd' || chr == 'i')
+	// // 	ft_memcpy(charchr, "0123456789", 11);
+	// printf("*[%ld]\n", nr);
+	if (chr == 'x' || chr == 'd' || chr == 'i')
+		return (charchrx[nr]);
+	else
+		return (charchrX[nr]);
+	// return 0;
 }

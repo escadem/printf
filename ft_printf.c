@@ -6,14 +6,13 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 19:09:04 by eescat-l          #+#    #+#             */
-/*   Updated: 2023/01/26 21:07:51 by eescat-l         ###   ########.fr       */
+/*   Updated: 2023/01/28 08:26:58 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libftprintf.h"
 #include "ft_printf.h"
 
-static int	ft_check_placeholder(char c)
+int	ft_check_placeholder(char c)
 {
 	char	*placeholder;
 	int		i;
@@ -30,7 +29,7 @@ static int	ft_check_placeholder(char c)
 	return (0);
 }
 
-static int	ft_perc_man(char const *string, va_list arguments, size_t *counter)
+int	ft_perc_man(char const *string, va_list arguments, size_t *counter)
 {
 	if (!*string || !ft_check_placeholder(*string))
 		return (-1);
@@ -46,15 +45,15 @@ static int	ft_perc_man(char const *string, va_list arguments, size_t *counter)
 		{
 			write(1, "0x", 2);
 			*counter += 2;
-			*counter += ft_puthex(va_arg(arguments, long), 'x');
+			*counter += ft_putpointer(va_arg(arguments, unsigned long), 'x');
 			// *counter += ft_putpointer(va_arg(arguments, long));
 		}
 		else if (*string == 'd' || *string == 'i')
-			*counter += ft_putdigit(va_arg(arguments, int), *string);
+			*counter += ft_putdecimal(va_arg(arguments, int), *string);
 		else if (*string == 'u')
 			*counter += ft_putunsigned(va_arg(arguments, unsigned int));
 		else if (*string == 'x' || *string == 'X')
-			*counter += ft_puthex(va_arg(arguments, long), *string);
+			*counter += ft_puthex(va_arg(arguments, unsigned int), *string);
 	}
 	return (0);
 }
@@ -95,20 +94,37 @@ int	ft_printf(char const *string, ...)
 // 	l = i;
 // 	printf ("\n\n%ld___%lu___%lx___\n\n",l,l,l);
 // 	printf("prueba\n");
-// 	ft_printf("prueba\n");
-// 	printf("i = %i\n", 15);
-// 	ft_printf("i = %i\n", 15);
-// 	printf("c = %%\n");
-// 	ft_printf("c = %%\n");
-// 	printf("printf = %d\n", 0);
-// 	ft_printf("ft_printf = %d\n", 0);
-// 	printf("printf = %d\n", -17);
-// 	ft_printf("ft_printf = %d\n", -17);
-// 	printf("printf = %X\n", -1);
-// 	ft_printf("ft_printf = %X\n", -1);
-// 	printf("puntero printf = %p\n", &i);
-// 	ft_printf("%p\n", &i);
-// 	ft_printf("puntero ft_printf = %p\n", &i);
-// 	printf("%c\n", 'a');
-// 	ft_printf("%c\n", 'a');
+// 	// ft_printf("prueba\n");
+// 	// printf("i = %i\n", 15);
+// 	// ft_printf("i = %i\n", 15);
+// 	// printf("i = %i\n", 15);
+// 	// ft_printf("i = %i\n", 15);
+// 	// printf("c = %%\n");
+// 	// ft_printf("c = %%\n");
+// 	// printf("printf = %d\n", 0);
+// 	// ft_printf("ft_printf = %d\n", 0);
+// 	// printf("printf = %d\n", -17);
+// 	// ft_printf("ft_printf = %d\n", -17);
+// 	// printf("printf = %u\n", -17);
+// 	// ft_printf("ft_printf = %u\n", -17);
+// 	// printf("printf = %X\n", -1);
+// 	// ft_printf("ft_printf = %X\n", -1);
+// 	// i = printf("%p\n", (void *)-14523);
+// 	// printf("i = %i\n", i);
+// 	// i = ft_printf("%p\n", (void *)-14523);
+// 	// printf("i = %i\n", i);
+// 	// printf("%c\n", 'a');
+// 	// ft_printf("%c\n", 'a');
+// 	// i = printf("%s\n", NULL);
+// 	// printf("i = %i\n", i);
+// 	// i = ft_printf("%s\n", NULL);
+// 	// printf("i = %i\n", i);
+// 	// i = printf(" %x ", LONG_MAX);
+// 	// printf("i = %i\n", i);
+// 	// i = ft_printf(" %x ", LONG_MAX);
+// 	// printf("i = %i\n", i);
+// 	i = printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+// 	printf("i = %i\n", i);
+// 	i = ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+// 	printf("i = %i\n", i);
 // }
