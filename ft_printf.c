@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 19:09:04 by eescat-l          #+#    #+#             */
-/*   Updated: 2023/01/28 09:11:47 by eescat-l         ###   ########.fr       */
+/*   Updated: 2023/01/28 09:16:16 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,47 +82,3 @@ int	ft_printf(char const *string, ...)
 	va_end(arguments);
 	return (counter);
 }
-
-// int main()
-// {
-// 	// char a = 'a';
-// 	// char *p_a = &a;
-// 	int i = -170;
-// 	long l;
-// 	l = i;
-// 	printf ("\n\n%ld___%lu___%lx___\n\n",l,l,l);
-// 	printf("prueba\n");
-// 	// ft_printf("prueba\n");
-// 	// printf("i = %i\n", 15);
-// 	// ft_printf("i = %i\n", 15);
-// 	// printf("i = %i\n", 15);
-// 	// ft_printf("i = %i\n", 15);
-// 	// printf("c = %%\n");
-// 	// ft_printf("c = %%\n");
-// 	// printf("printf = %d\n", 0);
-// 	// ft_printf("ft_printf = %d\n", 0);
-// 	// printf("printf = %d\n", -17);
-// 	// ft_printf("ft_printf = %d\n", -17);
-// 	// printf("printf = %u\n", -17);
-// 	// ft_printf("ft_printf = %u\n", -17);
-// 	// printf("printf = %X\n", -1);
-// 	// ft_printf("ft_printf = %X\n", -1);
-// 	// i = printf("%p\n", (void *)-14523);
-// 	// printf("i = %i\n", i);
-// 	// i = ft_printf("%p\n", (void *)-14523);
-// 	// printf("i = %i\n", i);
-// 	// printf("%c\n", 'a');
-// 	// ft_printf("%c\n", 'a');
-// 	// i = printf("%s\n", NULL);
-// 	// printf("i = %i\n", i);
-// 	// i = ft_printf("%s\n", NULL);
-// 	// printf("i = %i\n", i);
-// 	// i = printf(" %x ", LONG_MAX);
-// 	// printf("i = %i\n", i);
-// 	// i = ft_printf(" %x ", LONG_MAX);
-// 	// printf("i = %i\n", i);
-// 	i = printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
-// 	printf("i = %i\n", i);
-// 	i = ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
-// 	printf("i = %i\n", i);
-// }
